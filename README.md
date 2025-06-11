@@ -2,7 +2,7 @@
 #### Introduction
 The real-time fraud detection system uses a rule-based mechanism to detect fraudulent transactions and runs on a Kubernetes cluster.
 #### Software Architecture
-![img.png](img.png)
+![img-en.png](img-en.png)
 1. Transaction source: System for generating financial transactions
 2. Message queue: Processing incoming transactions (Alibaba Cloud messaging service)
 3. Fraud detection service: core processing logic (Spring Boot3 application)
