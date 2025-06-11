@@ -1,0 +1,26 @@
+
+# 日志配置
+logging:
+  level:
+    com.wlhy: debug
+    org.springframework: warn
+    com:
+      zaxxer:
+        hikari: DEBUG
+    org.apache.kafka: DEBUG
+    org.springframework.kafka: DEBUG
+
+# Kafka配置
+aliyun:
+  kafka:
+    ssl:
+      truststore:
+        location: ${SSL_LOCATION:classpath:truststore.jks}
+        password: ${TRUSTSTORE_PWD:KafkaOnsClient}
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:alikafka-serverless-cn-zp54ajv8a02-1000.alikafka.aliyuncs.com:9093}
+    username: ${KAFKA_USERNAME:fraud-detection-test}
+    password: ${KAFKA_PASSWORD:kafka123456}
+    security-protocol: ${KAFKA_SECURITY_PROTOCOL:SASL_SSL}
+    sasl-mechanism: ${KAFKA_SASL_MECHANISM:PLAIN}
+    topic: ${KAFKA_TOPIC:fraud-detection-test}
+    consumer-group: ${KAFKA_CONSUMER_GROUP:fraud-detection-test-group}
